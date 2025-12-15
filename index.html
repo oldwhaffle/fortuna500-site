@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FORTUNA 500</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="marquee" aria-hidden="true">
+    <div>
+      FORTUNA 500 • SOMERVILLE • LIVE & LOOSE • CORNCOB CORE •
+      FORTUNA 500 • SOMERVILLE • LIVE & LOOSE • CORNCOB CORE •
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>FORTUNA 500</h1>
+    <p class="tagline">
+      “sparkling and quotidian” strangers. recorded live & loose. refreshingly wry.
+    </p>
+
+    <section class="grid">
+      <div class="card">
+        <h2>listen</h2>
+        <ul>
+          <li>
+            <a href="https://open.spotify.com/artist/2umxvn58XAMxr3UaO2zw4T?si=FZ5IKz_jQ5qRAjZCqh76eA"
+               target="_blank" rel="noopener">Spotify</a>
+          </li>
+          <li>
+            <a href="https://fortunafivehundred.bandcamp.com/"
+               target="_blank" rel="noopener">Bandcamp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>contact</h2>
+        <p class="tiny">booking</p>
+        <p>
+          <a href="mailto:fortune500booking@gmail.com">
+            fortune500booking@gmail.com
+          </a>
+        </p>
+        <p class="tiny">instagram</p>
+        <p>
+          <a href="https://instagram.com/fortunafivehunderd"
+             target="_blank" rel="noopener">
+            @fortunafivehunderd
+          </a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>press</h2>
+        <p class="quote">
+          “Wowee Zowee-era Pavement… recorded live and loose…
+          one of Boston’s most promising and refreshingly wry new bands.”
+        </p>
+      </div>
+    </section>
+
+    <section class="photos">
+      <h2>evidence</h2>
+      <figure>
+        <img
+          src="https://f4.bcbits.com/img/0041763825_10.jpg"
+          alt="Fortuna 500 pose with corncobs. Photo by Lena Warnke."
+        />
+        <figcaption>
+          Fortuna 500 pose with corncobs. Photo by Lena Warnke.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="card detector">
+      <h2>CEO DETECTOR</h2>
+      <p class="tiny">
+        enter a name. results are legally meaningless.
+      </p>
+
+      <input
+        type="text"
+        id="ceoInput"
+        placeholder="first name only"
+        autocomplete="off"
+      />
+      <button id="scanBtn">SCAN</button>
+
+      <p id="result" class="result"></p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> FORTUNA 500 — DIY forever</p>
+    </footer>
+  </main>
+
+  <script>
+    // year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // CEO DETECTOR
+    const outcomes = [
+      "CEO detected. please leave the venue immediately.",
+      "possible mid-level manager energy.",
+      "not a CEO. vibes acceptable.",
+      "definitely not a CEO. welcome.",
+      "white collar criminal (alleged).",
+      "venture capital adjacent. proceed with caution.",
+      "just a normal person. rare.",
+      "union-friendly. we like you.",
+      "definitely lying about their job."
+    ];
+
+    document.getElementById("scanBtn").addEventListener("click", () => {
+      const name = document.getElementById("ceoInput").value.trim();
+      const result = document.getElementById("result");
+
+      if (!name) {
+        result.textContent = "no input detected. suspicious.";
+        return;
+      }
+
+      const pick = outcomes[Math.floor(Math.random() * outcomes.length)];
+      result.textContent = name + ": " + pick;
+    });
+  </script>
+
+</body>
+</html>
