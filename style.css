@@ -494,6 +494,15 @@ button:active{ transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
   gap: 12px;
   flex-wrap:wrap;
 }
+.counter{
+  border: 2px solid #000;
+  background:#fff;
+  display:inline-block;
+  padding: 2px 8px;
+  box-shadow: 3px 3px 0 #000;
+  transform: rotate(0.4deg);
+  
+}
 
 .blink{ animation: blink 0.7s steps(1) infinite; }
 .blink2{ animation: blink 1.1s steps(1) infinite; }
