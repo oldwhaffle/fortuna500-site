@@ -206,6 +206,13 @@
   </main>
 
   <script>
+
+    const key = "fortuna500_visits";
+    const current = Number(localStorage.getItem(key) || "0") + 1;
+    localStorage.setItem(key, String(current));
+    document.getElementById("visitorCount").textContent =
+    String(current).padStart(6, "0");
+
     document.getElementById("year").textContent = new Date().getFullYear();
     const ceoCountEl = document.getElementById("ceoCount");
     ceoCountEl.textContent = String(2 + Math.floor(Math.random() * 6));
