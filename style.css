@@ -15,7 +15,7 @@ body{
   margin:0;
   color:var(--ink);
 
-  /* ACTUAL tiled background image (repeat) */
+  /* repeating tile background */
   background-color:#ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   background-repeat: repeat;
@@ -212,6 +212,15 @@ a:hover{ background: var(--warn); }
   padding-left: 18px;
   font-size: 22px;
 }
+
+/* PRESS LINKS */
+.pressLinks{
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 22px;
+}
+.pressLinks li{ margin: 4px 0; }
+
 .microtag{
   margin-left: 8px;
   font-size: 18px;
@@ -251,6 +260,27 @@ a:hover{ background: var(--warn); }
   padding-left: 18px;
   font-size: 20px;
 }
+
+/* SHOW BOX (Dec 20 show) */
+.showBox{
+  border: 4px solid #000;
+  background: #fff;
+  padding: 10px 12px;
+  box-shadow: 6px 6px 0 #000;
+  transform: rotate(-0.2deg);
+  margin: 10px 0 12px;
+}
+.showDate{
+  display:inline-block;
+  padding: 2px 8px;
+  border: 3px solid #000;
+  background: var(--acid);
+  font-family: "Rye", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.showLine{ font-size: 24px; }
 
 .underConstruction{
   display:flex;
@@ -316,10 +346,20 @@ a:hover{ background: var(--warn); }
   background: #fff;
 }
 
+/* EVIDENCE / GALLERY */
 .evidence{
   margin-top: 16px;
   transform: rotate(-0.15deg);
 }
+
+/* New gallery row used in evidence section */
+.galleryRow{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 .evidenceRow{
   display:grid;
   grid-template-columns: 240px 1fr;
@@ -341,7 +381,7 @@ a:hover{ background: var(--warn); }
 }
 .tinyPhoto img{
   display:block;
-  width: 160px;  /* MUCH smaller band image */
+  width: 160px;
   height: auto;
   border: 3px solid #000;
   margin: 0 auto;
