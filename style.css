@@ -77,6 +77,58 @@ body{
   transform: rotate(-0.4deg);
 }
 
+.mailing{
+  margin-top: 12px;
+  border: 4px solid #000;
+  background:#fff;
+  padding: 10px 12px;
+  box-shadow: 6px 6px 0 #000;
+  transform: rotate(0.3deg);
+}
+
+.mailingTitle{
+  display:inline-block;
+  padding: 2px 8px;
+  border: 3px solid #000;
+  background: var(--hot);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.mailingForm{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.mailingInput{
+  flex: 1 1 220px;
+  padding: 10px 10px;
+  border: 4px solid #000;
+  background:#fff;
+  font-family: inherit;
+  font-size: 22px;
+}
+
+.mailingBtn{
+  padding: 10px 12px;
+  border: 4px solid #000;
+  background: var(--acid);
+  font-family: inherit;
+  font-size: 22px;
+  cursor:pointer;
+  box-shadow: 4px 4px 0 #000;
+  text-transform: uppercase;
+}
+.mailingBtn:hover{ background: var(--warn); }
+.mailingBtn:active{ transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+
+.mailingFine{ margin-top: 6px; }
+
 .titleRow{
   display:flex;
   align-items:flex-start;
