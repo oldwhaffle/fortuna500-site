@@ -415,10 +415,10 @@ a:hover{ background: var(--warn); }
 }
 
 .galleryRow{
-  display: grid;
-  grid-template-columns: repeat(2, 240px);
-  gap: 14px;
-  justify-content: center;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  justify-items:center;
 }
 
 @media (max-width: 600px){
